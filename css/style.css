@@ -216,13 +216,12 @@ h3 {
 
 
 .feature {
-	--delay: 100ms;
+	--delay: 1s;
 
 	cursor: pointer;
 	isolation: isolate;
 	position: relative;
 	overflow: hidden;
-	/* max-width: 24rem; */
 	min-height: 15rem;
 
 	border-radius: var(--bd-rad);
@@ -233,6 +232,8 @@ h3 {
 
 	box-shadow: 0 0.5rem 0.5rem var(--grayblue-50);
 
+	opacity: 0;
+	animation: opacity 1s ease-in forwards;
 	transition: all 500ms;
 }
 
@@ -366,5 +367,11 @@ h3 {
 @keyframes slide-up {
 	100% {
 		transform: translateY(0);
+	}
+}
+
+@keyframes opacity {
+	100% {
+		opacity: 100%;
 	}
 }
